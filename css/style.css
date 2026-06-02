@@ -163,7 +163,7 @@ filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(25%) cont
 .experience-section {
   width: 100%;
   max-width: 1024px;
-  margin: 0 auto;
+  margin: 0 auto 200px;
   padding: 0 40px;           
   box-sizing: border-box;
 }
@@ -223,3 +223,32 @@ filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(25%) cont
   box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.25);
 }
 
+.skills-section {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.skills-section-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 40px 30px; 
+  justify-items: center;
+  align-items: center;
+}
+
+.skills-section-images img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 768px) {
+  .skills-section-images {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+  }
+}
