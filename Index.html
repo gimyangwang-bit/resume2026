@@ -3,13 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <title>자기소개서</title>
   </head>
   <body>
-    <header class="top-bar"></header>
+    <header class="main-header">
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#about-me">ABOUT ME</a></li>
+          <li><a href="#work-experience">WORK EXPERIENCE</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#hobbies">HOBBIES</a></li>
+          <li><a href="#education">EDUCATION</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
     <h1 class="main-text">Frontend student</h1>
-    <img src="capture.png" alt="김양왕 전신 사진" />
+    <img src="./assets/capture.png" alt="김양왕 전신 사진" />
 
     <div class="name-age">
       <span>NAME</span>
@@ -18,7 +30,7 @@
       <span>[ 26 ]</span>
     </div>
 
-    <div>
+    <div id="about-me" class="about-me-section">
       <h2 class="sub-text">About ME</h2>
       <p class="sub-text-content">
         안녕하세요 이번에 프로트엔드14기 교육을 받고 있는 주니어 프론트엔드
@@ -32,7 +44,7 @@
       </p>
     </div>
 
-    <section class="experience-section">
+    <section id="work-experience" class="experience-section">
       <h2 class="sub-text">WORK EXPERIENCE</h2>
       <ul class="experience-section-content">
         <li>
@@ -40,7 +52,7 @@
           <p class="sub-text-content">
             계약직 임도관리원 (2020.2 ~ 2020.12, 10개월)
           </p>
-          <img src="임도.svg" alt="산봉우리 이미지" />
+          <img src="./assets/임도.svg" alt="산봉우리 이미지" />
         </li>
 
         <li>
@@ -50,7 +62,7 @@
           </p>
           <img
             class="experience-image"
-            src="충성.svg"
+            src="./assets/충성.svg"
             alt="충성하고 있는 상반신만 보이는 미군 이미지"
           />
         </li>
@@ -62,7 +74,7 @@
           </p>
           <img
             class="experience-image"
-            src="유지보수.svg"
+            src="./assets/유지보수.svg"
             alt="몽키스패너와 일자드라이버가 X자로 교차된 이미지"
           />
         </li>
@@ -74,7 +86,7 @@
           </p>
           <img
             class="experience-image"
-            src="화학분자.svg"
+            src="./assets/화학분자.svg"
             alt="탄소 주변에 여러원자들이 원을 이루는 이미지"
           />
         </li>
@@ -84,55 +96,55 @@
             5. 프론트엔드 14기 오르미 교육생 (2026 . 4 . 29 ~ 9 . 18)
           </h3>
           <img
-            src="고양이 개발자.jpg"
+            src="./assets/고양이 개발자.jpg"
             alt="자바 스크립트 관련 노트북 화면을 보고있는 갈색고양이의 대각선뒷모습 사진"
           />
         </li>
       </ul>
     </section>
 
-    <section class="skills-section">
+    <section id="skills" class="skills-section">
       <h2 class="sub-text">SKILLS</h2>
 
       <div class="skills-section-images">
-        <img src="html.jpg" alt="HTML5 로고 이미지" />
-        <img src="css.jpg" alt="CSS3 로고 이미지" />
-        <img src="figma.jpg" alt="Figma 로고 이미지" />
-        <img src="git.jpg" alt="Git 로고 이미지" />
-        <img src="github.jpg" alt="GitHub 로고 이미지" />
+        <img src="./assets/html.jpg" alt="HTML5 로고 이미지" />
+        <img src="./assets/css.jpg" alt="CSS3 로고 이미지" />
+        <img src="./assets/figma.jpg" alt="Figma 로고 이미지" />
+        <img src="./assets/git.jpg" alt="Git 로고 이미지" />
+        <img src="./assets/github.jpg" alt="GitHub 로고 이미지" />
       </div>
     </section>
 
-    <div class="habby-section">
-      <h2 class="sub-text">HABBY</h2>
+    <section id="hobbies" class="hobbies-section">
+      <h2 class="sub-text">HOBBIES</h2>
       <div class="pentagon"></div>
 
       <div class="vertex spot-fitness">
         <img
-          src="헬스.svg"
+          src="./assets/헬스.svg"
           alt="바벨을 역도선수처럼 양손으로 번쩍 드는 이미지"
         />
         <span>헬스</span>
       </div>
       <div class="vertex spot-ott">
-        <img src="유튜브.svg" alt="OTT, 유튜브 로고" />
+        <img src="./assets/유튜브.svg" alt="OTT, 유튜브 로고" />
         <span>OTT, 유튜브 시청</span>
       </div>
       <div class="vertex spot-music">
-        <img src="노래감상.svg" alt="스피커 양쪽으로 두대 이미지" />
+        <img src="./assets/노래감상.svg" alt="스피커 양쪽으로 두대 이미지" />
         <span>노래 감상</span>
       </div>
       <div class="vertex spot-soccer">
-        <img src="축구시청.svg" alt="공중발리슛을 갈기는 이미지" />
+        <img src="./assets/축구시청.svg" alt="공중발리슛을 갈기는 이미지" />
         <span>축구 시청</span>
       </div>
       <div class="vertex spot-coffee">
-        <img src="커피한잔.svg" alt="김이 나는 커피잔" />
+        <img src="./assets/커피한잔.svg" alt="김이 나는 커피잔" />
         <span>커피 한잔</span>
       </div>
-    </div>
+    </section>
 
-    <section class="education-section">
+    <section id="education" class="education-section">
       <h2 class="sub-text">EDUCATION</h2>
 
       <h3 class="third-text">경기 가평 설악고등학교</h3>
@@ -158,18 +170,18 @@
       </p>
     </section>
 
-    <footer class="footer">
+    <section id="contact" class="contact-section">
       <h2 class="sub-text">CONTACT</h2>
 
-      <div class="footer-email">
-        <img src="이메일.svg" alt="편지봉투 이미지" />
+      <div class="contact-section-email">
+        <img src="./assets/이메일.svg" alt="편지봉투 이미지" />
         <span>gimyangwang@gmail.com</span>
       </div>
 
-      <div class="footer-phone">
-        <img src="전화.svg" alt="전화기 이미지" />
+      <div class="contact-section-phone">
+        <img src="./assets/전화.svg" alt="전화기 이미지" />
         <span>010-4653-1245</span>
       </div>
-    </footer>
+    </section>
   </body>
 </html>
