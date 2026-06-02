@@ -226,7 +226,7 @@ filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(25%) cont
 .skills-section {
   width: 100%;
   max-width: 1024px;
-  margin: 0 auto;
+  margin: 0 auto 200px;
   padding: 0 40px;
   box-sizing: border-box;
 }
@@ -251,4 +251,89 @@ filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(25%) cont
     grid-template-columns: repeat(2, 1fr);
     gap: 30px 20px;
   }
+}
+
+.hobbies-section {
+  position: relative !important;
+  width: 100%;
+  max-width: 800px;
+  height: 750px;                
+  margin: 0 auto 200px;
+  box-sizing: border-box;
+}
+
+
+.pentagon {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 320px;
+  height: 320px;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, #c41230 0%, #8a061a 100%);
+  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  z-index: 1;
+}
+
+.vertex {
+  position: absolute !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 10;
+  top: auto; left: auto; right: auto; bottom: auto;
+}
+
+.vertex img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  filter: invert(15%) sepia(95%) saturate(4193%) hue-rotate(345deg) brightness(85%) contrast(101%) drop-shadow(2px 4px 6px rgba(219, 8, 40, 0.3));
+}
+
+.vertex span {
+  font-size: 15px;
+  font-weight: bold;
+  color: #404040;
+  margin-top: 8px;
+  white-space: nowrap;
+}
+
+.spot-fitness {
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.spot-ott {
+  top: 46% !important;
+  right: 1% !important;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.spot-ott img {
+  width: 70px !important;
+  height: auto !important;
+}
+
+
+.spot-music {
+  bottom: 10%;
+  right: 20%;
+
+}
+
+.spot-soccer {
+  bottom: 10%;
+  left: 20%;
+}
+
+
+.spot-coffee {
+  top: 40%;
+  left: 12%;
 }
