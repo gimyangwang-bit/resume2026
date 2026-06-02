@@ -43,3 +43,58 @@ body {
 .main-nav li a:hover {
   color: rgb(255, 64, 64);
 }
+
+.main-visual {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 150px 32px;
+}
+
+.main-text {
+  color: #b6282d;
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+  font-family: Halant;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 5px;
+}
+
+.main-image {
+  width: 300px;
+  height: 485px;
+  flex-shrink: 0;
+  aspect-ratio: 18/29;
+  background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+  box-shadow: 10px 5px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.profile-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.name-age {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;습니다 */
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 18px;
+}
+
+
+.info-item .label {
+  font-weight: bold;
+  color: #b6282d;
+}
