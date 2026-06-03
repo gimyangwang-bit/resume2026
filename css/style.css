@@ -322,13 +322,13 @@ filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(25%) cont
 
 
 .spot-music {
-  bottom: 10%;
+  bottom: 4%;
   right: 20%;
 
 }
 
 .spot-soccer {
-  bottom: 10%;
+  bottom: 4%;
   left: 20%;
 }
 
@@ -336,4 +336,21 @@ filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(25%) cont
 .spot-coffee {
   top: 40%;
   left: 12%;
+}
+
+.svg-icon {
+  color: #B6282D;
+}
+
+.underline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 16px;
+}
+  
+
+.img-icon {
+  filter: invert(21%) sepia(80%) saturate(3369%) hue-rotate(344deg) brightness(89%) contrast(97%);
 }
