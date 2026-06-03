@@ -10,6 +10,14 @@ body {
   box-sizing: border-box;
 }
 
+.background {
+  padding: 0;
+   margin: 0;
+  width: 1024px;
+  background-color: #EBEBE7;
+}
+  
+
 .main-header {
   position: sticky;
   top: 0;
