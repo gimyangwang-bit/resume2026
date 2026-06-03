@@ -28,6 +28,15 @@ body {
   background: linear-gradient(to right, #450a0a, #b91c1c, #450a0a);
 }
 
+.main-header,#about-me,
+#work-experience,
+#skills,
+#hobbies,
+#education,
+#contact {
+  scroll-margin-top: 80px;
+}
+
 .main-nav ul {
   display: flex;
   list-style: none;
@@ -108,7 +117,7 @@ body {
 }
 
 .about-me-section {
-  margin-bottom: 100px;
+  margin: 0px 16px 200px;
 }
 
 .sub-text {
@@ -353,9 +362,9 @@ filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(25%) cont
 .underline {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
-  margin: 16px;
+  margin-bottom: 32px auto;
 }
   
 
