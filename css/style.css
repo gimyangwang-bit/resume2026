@@ -34,7 +34,7 @@ body {
 #hobbies,
 #education,
 #contact {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 90px;
 }
 
 .main-header,#home {
@@ -192,10 +192,10 @@ filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(25%) cont
 
 .experience-section-content {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 450px)); 
-  justify-content: space-between; 
+  grid-template-columns: repeat(2, minmax(0, 300px)); 
+  justify-content: space-around; 
   
-  gap: 60px 0;
+  gap: 200px 0;
   
   list-style: none;
   padding: 0;
@@ -375,4 +375,8 @@ filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(25%) cont
 
 .img-icon {
   filter: invert(21%) sepia(80%) saturate(3369%) hue-rotate(344deg) brightness(89%) contrast(97%);
+}
+
+.contact-section h2 {
+ padding-bottom: 18px;
 }
