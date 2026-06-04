@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Halant:wght@300;400;500;600;700&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -8,7 +8,13 @@ body {
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    "Gowun Dodum",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 }
 
 .background {
@@ -145,8 +151,8 @@ body {
 .about-me-content {
   align-self: stretch;
   color: #3d3838;
-  font-size: 28px;
-  line-height: 2.9;
+  font-size: 26px;
+  line-height: 2.6;
   font-weight: 400;
 }
 
@@ -296,7 +302,7 @@ body {
   position: relative !important;
   width: 100%;
   max-width: 950px;
-  height: 750px;
+  height: 850px;
   margin: 0 auto 200px;
   box-sizing: border-box;
 }
@@ -305,8 +311,8 @@ body {
   position: absolute;
   top: 55%;
   left: 50%;
-  width: 320px;
-  height: 320px;
+  width: 380px;
+  height: 380px;
   transform: translate(-50%, -50%);
   background: radial-gradient(circle, #e2262d 0%, #761f22 100%);
 
@@ -352,9 +358,11 @@ body {
 
 .spot-ott {
   top: 46% !important;
-  right: 1% !important;
-  flex-direction: row;
+  right: 12% !important;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 10px;
 }
 
