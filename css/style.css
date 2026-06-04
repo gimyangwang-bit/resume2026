@@ -305,7 +305,8 @@ body {
   width: 320px;
   height: 320px;
   transform: translate(-50%, -50%);
-  background: radial-gradient(circle, #c41230 0%, #8a061a 100%);
+  background: radial-gradient(circle, #e2262d 0%, #761f22 100%);
+
   clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
   z-index: 1;
 }
