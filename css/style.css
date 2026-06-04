@@ -2,8 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  margin: 0;
-  padding: 0;
   max-width: 1024px;
   margin: 0 auto;
   padding: 0;
@@ -12,11 +10,10 @@ body {
 
 .background {
   padding: 0;
-   margin: 0;
+  margin: 0;
   width: 1024px;
-  background-color: #EBEBE7;
+  background-color: #ebebe7;
 }
-  
 
 .main-header {
   position: sticky;
@@ -28,7 +25,8 @@ body {
   background: linear-gradient(to right, #450a0a, #b91c1c, #450a0a);
 }
 
-.main-header,#about-me,
+.main-header,
+#about-me,
 #work-experience,
 #skills,
 #hobbies,
@@ -37,8 +35,9 @@ body {
   scroll-margin-top: 90px;
 }
 
-.main-header,#home {
-  scroll-margin-top: 300px;
+.main-header,
+#home {
+  scroll-margin-top: 3000px;
 }
 
 .main-nav ul {
@@ -69,15 +68,16 @@ body {
 .main-visual {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 150px 32px;
+  padding: 150px 100px;
+  gap: 50px;
+  margin-bottom: 100px;
 }
 
 .main-text {
   color: #b6282d;
   text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
   font-family: Halant;
-  font-size: 128px;
+  font-size: 100px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -85,8 +85,8 @@ body {
 }
 
 .main-image {
-  width: 300px;
-  height: 485px;
+  width: 280px;
+  height: 430px;
   flex-shrink: 0;
   aspect-ratio: 18/29;
   background: url(<path-to-image>) lightgray 50% / cover no-repeat;
@@ -97,14 +97,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
 }
 
 .name-age {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  max-width: 300px;습니다 */
+  width: 90%;
+  max-width: 300px;
 }
 
 .info-item {
@@ -115,91 +115,51 @@ body {
   font-size: 18px;
 }
 
-
-.info-item .label {
-  font-weight: bold;
+.label {
   color: #b6282d;
+  font-weight: 700;
 }
 
 .about-me-section {
-  margin: 0px 16px 200px;
+  margin: 0px 32px 200px;
 }
 
 .sub-text {
   display: flex;
-height: 40.463px;
-flex-direction: column;
-justify-content: center;
-flex-shrink: 0;
-align-self: stretch;
-color: #B6282D;
-text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-font-family: Halant;
-font-size: 48px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+  height: 40px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  align-self: stretch;
+  color: #b6282d;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  font-family: Halant;
+  font-size: 48px;
+  font-weight: 700;
 }
 
 .about-me-content {
   align-self: stretch;
-  color: #3D3838;
-font-family: Halant;
-font-size: 32px;
-
-font-weight: 400;
-
-
-}
-   
-
-.experience-section-content {
-  list-style: none;
-}
-
-.maintenance-image {
-  width: 300px;
-  height: 250px;
-  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.25));
-  filter: invert(53%) sepia(54%) saturate(417%) hue-rotate(76deg) brightness(91%) contrast(85%) drop-shadow(10px 10px 10px rgba(0,0,0,0.25));
-}
-
-.soldier-image {
-  width: 200px;
-  height: 250px;
-  filter: invert(21%) sepia(87%) saturate(583%) hue-rotate(85deg) brightness(95%) contrast(104%) drop-shadow(1px 0px 0px #002D08) drop-shadow(-1px 0px 0px #002D08) drop-shadow(0px 1px 0px #002D08) drop-shadow(0px -1px 0px #002D08) drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.25));
-}
-
-.wrench-image {
-  width: 250px;
-height: 250px;
-filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(25%) contrast(85%);
-}
-
-.carbon-image {
-  width: 250px;
-  height: 250px;
-  filter: invert(13%) sepia(35%) saturate(3029%) hue-rotate(243deg) brightness(96%) contrast(93%) drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+  color: #3d3838;
+  font-family: Halant;
+  font-size: 28px;
+  line-height: 2.9;
+  font-weight: 400;
 }
 
 .experience-section {
+  display: grid;
   width: 100%;
   max-width: 1024px;
   margin: 0 auto 200px;
-  padding: 0 40px;           
+  padding: 0 48px;
   box-sizing: border-box;
 }
 
 .experience-section-content {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 300px)); 
-  justify-content: space-around; 
-  
-  gap: 200px 0;
-  
   list-style: none;
-  padding: 0;
-  margin: 0;
+  display: grid;
+  justify-content: space-between;
 }
 
 .experience-section-content > li {
@@ -209,18 +169,36 @@ filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(25%) cont
   width: 100%;
 }
 
-@media (max-width: 768px) {
-  .experience-section {
-    padding: 0 20px;
-  }
-  
-  .experience-section-content {
-   
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
+.maintenance-image {
+  width: 300px;
+  height: 250px;
+  margin-bottom: 20px;
+  filter: invert(53%) sepia(54%) saturate(417%) hue-rotate(76deg)
+    brightness(91%) contrast(85%)
+    drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.25));
 }
 
+.soldier-image {
+  width: 200px;
+  height: 250px;
+  filter: invert(21%) sepia(87%) saturate(583%) hue-rotate(85deg)
+    brightness(95%) contrast(104%)
+    drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.25));
+}
+
+.wrench-image {
+  width: 250px;
+  height: 250px;
+  filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(25%)
+    contrast(85%);
+}
+
+.carbon-image {
+  width: 250px;
+  height: 250px;
+  filter: invert(13%) sepia(35%) saturate(3029%) hue-rotate(243deg)
+    brightness(96%) contrast(93%) drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
+}
 .cat-content {
   display: flex;
   flex-direction: column;
@@ -237,9 +215,9 @@ filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(25%) cont
 }
 
 .cat-image {
-  width: 600px;
-  max-width: 100%;   
-  height: auto;       
+  width: 400px;
+  max-width: 100%;
+  height: auto;
   display: block;
   margin: 0 auto;
   box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.25);
@@ -255,17 +233,53 @@ filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(25%) cont
 
 .skills-section-images {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 40px 30px; 
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 30px;
   justify-items: center;
   align-items: center;
+  margin-top: 150px;
 }
 
 .skills-section-images img {
   width: 100%;
-  max-width: 200px;
-  height: auto;
+
   object-fit: contain;
+}
+
+.html {
+  width: 150px;
+  height: 100px;
+}
+
+.css {
+  width: 100px;
+  height: 100px;
+}
+
+.figma {
+  width: 180px;
+  height: 180px;
+}
+
+.git {
+  width: 150px;
+  height: 100px;
+}
+
+.github {
+  width: 180px;
+  height: 130px;
+}
+
+.premiere {
+  width: 120px;
+  height: 120px;
+}
+
+.after_effcts {
+  width: 120px;
+  height: 120px;
+  margin: 16px auto 100px;
 }
 
 @media (max-width: 768px) {
@@ -278,12 +292,11 @@ filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(25%) cont
 .hobbies-section {
   position: relative !important;
   width: 100%;
-  max-width: 800px;
-  height: 750px;                
+  max-width: 950px;
+  height: 750px;
   margin: 0 auto 200px;
   box-sizing: border-box;
 }
-
 
 .pentagon {
   position: absolute;
@@ -305,14 +318,18 @@ filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(25%) cont
   justify-content: center;
   text-align: center;
   z-index: 10;
-  top: auto; left: auto; right: auto; bottom: auto;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
 }
 
 .vertex img {
   width: 120px;
   height: 120px;
   object-fit: contain;
-  filter: invert(15%) sepia(95%) saturate(4193%) hue-rotate(345deg) brightness(85%) contrast(101%) drop-shadow(2px 4px 6px rgba(219, 8, 40, 0.3));
+  filter: invert(18%) sepia(81%) saturate(3665%) hue-rotate(345deg)
+    brightness(87%) contrast(92%);
 }
 
 .vertex span {
@@ -342,11 +359,9 @@ filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(25%) cont
   height: auto !important;
 }
 
-
 .spot-music {
   bottom: 4%;
   right: 20%;
-
 }
 
 .spot-soccer {
@@ -354,14 +369,13 @@ filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(25%) cont
   left: 20%;
 }
 
-
 .spot-coffee {
   top: 40%;
   left: 12%;
 }
 
 .svg-icon {
-  color: #B6282D;
+  color: #b6282d;
 }
 
 .underline {
@@ -371,12 +385,12 @@ filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(25%) cont
   width: 100%;
   margin-bottom: 32px auto;
 }
-  
 
 .img-icon {
-  filter: invert(21%) sepia(80%) saturate(3369%) hue-rotate(344deg) brightness(89%) contrast(97%);
+  filter: invert(21%) sepia(80%) saturate(3369%) hue-rotate(344deg)
+    brightness(89%) contrast(97%);
 }
 
 .contact-section h2 {
- padding-bottom: 18px;
+  padding-bottom: 18px;
 }
