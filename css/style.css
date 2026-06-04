@@ -398,3 +398,20 @@ body {
 .contact-section h2 {
   padding-bottom: 18px;
 }
+
+.footer {
+  max-width: 1024px;
+  height: 80px;
+  background-color: #b6282d;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: large;
+  background: linear-gradient(to right, #b6282d, #6e171a);
+}
+
+.footer p {
+  color: #ebebe7;
+}
