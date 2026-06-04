@@ -22,7 +22,7 @@ body {
   width: 100%;
   z-index: 1000;
   height: 60px;
-  background: linear-gradient(to right, #450a0a, #b91c1c, #450a0a);
+  background: #ac282c;
 }
 
 .main-header,
