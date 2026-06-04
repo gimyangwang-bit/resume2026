@@ -329,8 +329,8 @@ body {
   width: 120px;
   height: 120px;
   object-fit: contain;
-  filter: invert(18%) sepia(81%) saturate(3665%) hue-rotate(345deg)
-    brightness(87%) contrast(92%);
+  filter: invert(16%) sepia(85%) saturate(3400%) hue-rotate(342deg)
+    brightness(84%) contrast(94%);
 }
 
 .vertex span {
