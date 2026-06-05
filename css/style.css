@@ -16,15 +16,12 @@ body {
     sans-serif;
 }
 
-.header {
-  top: 0;
-  position: sticky;
-  z-index: 1000;
-}
-
 .main-header {
   height: 60px;
   background: linear-gradient(to right, #6e171a, #b6282d);
+  top: 0;
+  position: sticky;
+  z-index: 1000;
 }
 
 .main-header,
@@ -43,15 +40,16 @@ body {
 }
 
 .main-nav ul {
-  display: flex;
   list-style: none;
+  display: flex;
+  justify-content: space-between;
   padding: 0;
   margin: 0;
   font-size: 22px;
   flex-wrap: nowrap;
   flex-shrink: 0;
   width: 100%;
-  justify-content: space-between;
+
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -72,7 +70,7 @@ body {
 
 @media screen and (max-width: 1023px) {
   .main-nav ul {
-    font-size: 18px;
+    font-size: 16px;
     justify-content: space-around;
   }
 
@@ -300,7 +298,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  width: 100%;
+  width: 98%;
   padding: 0;
   margin: 100px 0 0px;
 }
@@ -313,8 +311,8 @@ body {
 }
 
 .maintenance-image {
-  width: 300px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   margin-bottom: 20px;
   filter: invert(53%) sepia(54%) saturate(417%) hue-rotate(76deg)
     brightness(91%) contrast(85%)
@@ -322,23 +320,23 @@ body {
 }
 
 .soldier-image {
-  width: 200px;
-  height: 250px;
+  width: 150px;
+  height: 200px;
   filter: invert(21%) sepia(87%) saturate(583%) hue-rotate(85deg)
     brightness(95%) contrast(104%)
     drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.25));
 }
 
 .wrench-image {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   filter: invert(24%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(25%)
     contrast(85%);
 }
 
 .carbon-image {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   filter: invert(13%) sepia(35%) saturate(3029%) hue-rotate(243deg)
     brightness(96%) contrast(93%) drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.25));
 }
@@ -359,7 +357,7 @@ body {
 }
 
 .cat-image {
-  width: 300px;
+  width: 250px;
   height: auto;
   display: block;
   margin: 0 auto;
@@ -475,13 +473,13 @@ body {
 }
 
 .css {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
 }
 
 .figma {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
 }
 
 .git {
@@ -495,13 +493,13 @@ body {
 }
 
 .premiere {
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
 }
 
 .after_effcts {
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
 }
 
 /* ==========================================
@@ -535,7 +533,7 @@ body {
 
   .figma,
   .github {
-    max-width: 140px;
+    max-width: 200px;
   }
   .html,
   .git {
@@ -586,7 +584,6 @@ body {
   position: relative !important;
   width: 100%;
   aspect-ratio: 4 / 3.2;
-  max-width: 1100px;
   margin: 0 auto 50px;
   box-sizing: border-box;
 }
@@ -596,6 +593,7 @@ body {
    ========================================================================== */
 .hobbies-section h2.sub-text {
   display: block;
+  text-align: left !important;
   margin: 0 0 20px 40px;
   font-size: clamp(1.8rem, 4vw, 48px);
   font-weight: 700;
@@ -608,7 +606,7 @@ body {
   position: absolute;
   top: 60%;
   left: 50%;
-  width: 35%;
+  width: 40%;
   height: 48%;
   transform: translate(-50%, -50%);
   background: radial-gradient(circle, #e2262d 0%, #761f22 100%);
@@ -653,8 +651,8 @@ body {
 }
 
 .spot-ott {
-  top: 52% !important;
-  right: 18% !important;
+  top: 48% !important;
+  right: 16% !important;
   left: auto !important;
 }
 .spot-ott img {
@@ -664,7 +662,7 @@ body {
 
 .spot-music {
   bottom: 4%;
-  right: 20%;
+  right: 18%;
 }
 
 .spot-soccer {
@@ -673,8 +671,8 @@ body {
 }
 
 .spot-coffee {
-  top: 46%;
-  left: 18%;
+  top: 42%;
+  left: 14%;
 }
 
 .svg-icon {
@@ -695,35 +693,6 @@ body {
   padding-bottom: 18px;
 }
 
-/* ==========================================================================
-   기본 스타일 (Mobile: 320px ~ 767px)
-   * 모바일 화면에서는 가로폭이 좁으므로 요소들이 겹치지 않게 패딩과 정렬을 압축합니다.
-   ========================================================================== */
-.underline {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  gap: clamp(8px, 2vw, 16px);
-  color: #ebebe7;
-  padding: 0 16px;
-  box-sizing: border-box;
-}
-
-.underline p {
-  color: #ebebe7;
-  font-size: clamp(12px, 3.5vw, 15px);
-  margin: 0;
-}
-
-.underline img {
-  width: clamp(16px, 4vw, 22px);
-  height: auto;
-  object-fit: contain;
-}
-
 .main-footer {
   min-height: 60px;
   background-color: #b6282d;
@@ -731,54 +700,42 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
+  font-weight: 200;
   font-size: 14px;
-  text-align: center;
   padding: 10px 20px;
   margin-top: 30px;
+  color: #ebebe7;
 }
 
-/* ==========================================================================
-   Tablet (768px ~ 1023px)
-   ========================================================================== */
-@media screen and (min-width: 768px) {
-  .underline {
-    gap: 14px;
-    padding: 0 30px;
-  }
-
-  .underline p {
-    font-size: 15px;
-  }
-
-  .main-footer {
-    min-height: 70px;
-    font-size: 16px;
-    margin-top: 40px;
-  }
+.footer-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 24px;
+  padding: 0 16px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
-/* ==========================================================================
-   Desktop & Large (1024px ~ 1280px 이상 공통)
-   * 원본 디자인에서 의도하신 수치와 수직 정렬 라인을 완벽하게 복원합니다.
-   ========================================================================== */
-@media screen and (min-width: 1024px) {
-  .underline {
-    gap: 16px;
-    padding: 0;
-  }
+.contact-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
 
-  .underline p {
-    font-size: 16px;
-  }
+.contact-item .img-icon {
+  width: 18px;
+  height: auto;
+  object-fit: contain;
+  vertical-align: middle;
+  filter: brightness(0) invert(1);
+}
 
-  .underline img {
-    width: 24px;
-  }
-
-  .main-footer {
-    height: 80px;
-    font-size: 1.15rem;
-    margin-top: 50px;
-  }
+.contact-item span {
+  color: #ebebe7;
+  font-weight: 500;
 }
