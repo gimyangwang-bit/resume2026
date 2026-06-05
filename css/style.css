@@ -158,6 +158,7 @@ body {
   aspect-ratio: 18/29;
   background: url(<path-to-image>) lightgray 50% / cover no-repeat;
   box-shadow: 10px 5px 4px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
 }
 
 .profile-box {
@@ -685,7 +686,7 @@ body {
 
 /* 12시 방향: 헬스 */
 .spot-fitness {
-  top: 13%;
+  top: 11%;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -693,7 +694,7 @@ body {
 /* 3시 방향: OTT, 유튜브 시청 */
 .spot-ott {
   top: 52% !important;
-  right: 21% !important;
+  right: 18% !important;
   left: auto !important;
 }
 .spot-ott img {
@@ -703,20 +704,20 @@ body {
 
 /* 5시 방향: 노래 감상 */
 .spot-music {
-  bottom: 2%;
-  right: 26%;
+  bottom: 4%;
+  right: 20%;
 }
 
 /* 7시 방향: 축구 시청 */
 .spot-soccer {
-  bottom: 2%;
-  left: 26%;
+  bottom: 4%;
+  left: 20%;
 }
 
 /* 9시 방향: 커피 한잔 */
 .spot-coffee {
-  top: 52%;
-  left: 21%;
+  top: 46%;
+  left: 18%;
 }
 
 .svg-icon {
@@ -733,34 +734,103 @@ body {
   }
 }
 
-.underline {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-  margin-bottom: 32px auto;
-}
-
-.img-icon {
-  filter: invert(21%) sepia(80%) saturate(3369%) hue-rotate(344deg)
-    brightness(89%) contrast(97%);
-}
-
 .contact-section h2 {
   padding-bottom: 18px;
 }
 
-.footer {
-  height: 80px;
+/* ==========================================================================
+   기본 스타일 (Mobile: 320px ~ 767px)
+   * 모바일 화면에서는 가로폭이 좁으므로 요소들이 겹치지 않게 패딩과 정렬을 압축합니다.
+   ========================================================================== */
+.underline {
+  display: flex;
+  /* 모바일에서는 아이콘과 텍스트 쌍이 세로로 떨어질 수 있도록 flex-wrap 허용 */
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  /* 모바일 화면에 맞춰 요소 간 간격을 조금 좁힙니다 */
+  gap: clamp(8px, 2vw, 16px);
+  color: #ebebe7;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.underline p {
+  color: #ebebe7;
+  /* 모바일에 최적화된 텍스트 크기 */
+  font-size: clamp(12px, 3.5vw, 15px);
+  margin: 0;
+}
+
+/* 연락처 아이콘 크기 제어 (과하게 커지지 않도록 텍스트 크기에 동기화) */
+.underline img {
+  width: clamp(16px, 4vw, 22px);
+  height: auto;
+  object-fit: contain;
+}
+
+.main-footer {
+  /* 모바일에서는 높이를 소폭 유연하게 가져가서 여백 문제를 방지합니다 */
+  min-height: 60px;
   background-color: #b6282d;
+  background: linear-gradient(to right, #b6282d, #6e171a);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: large;
-  background: linear-gradient(to right, #b6282d, #6e171a);
+  /* 모바일에 맞춘 푸터 폰트 크기 */
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 20px;
+  /* 위쪽 컨텐츠들과 불필요하게 벌어지는 여백을 없애기 위해 마진 최소화 */
+  margin-top: 30px;
 }
 
-.footer p {
-  color: #ebebe7;
+/* ==========================================================================
+   Tablet (768px ~ 1023px)
+   ========================================================================== */
+@media screen and (min-width: 768px) {
+  .underline {
+    gap: 14px;
+    padding: 0 30px;
+  }
+
+  .underline p {
+    font-size: 15px;
+  }
+
+  .main-footer {
+    min-height: 70px;
+    font-size: 16px;
+    margin-top: 40px;
+  }
+}
+
+/* ==========================================================================
+   Desktop & Large (1024px ~ 1280px 이상 공통)
+   * 원본 디자인에서 의도하신 수치와 수직 정렬 라인을 완벽하게 복원합니다.
+   ========================================================================== */
+@media screen and (min-width: 1024px) {
+  .underline {
+    /* 기존 의도하신 원본 간격 복원 */
+    gap: 16px;
+    padding: 0;
+  }
+
+  .underline p {
+    /* 원래 감성인 큰 글씨 크기 복원 */
+    font-size: 16px;
+  }
+
+  .underline img {
+    width: 24px;
+  }
+
+  .main-footer {
+    height: 80px; /* 원본 고정 높이 복원 */
+    font-size: 1.15rem;
+    margin-top: 50px;
+  }
 }
