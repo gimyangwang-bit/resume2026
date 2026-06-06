@@ -16,14 +16,41 @@ body {
     sans-serif;
 }
 
+/* ==========================================================================
+   기본 헤더 및 내비게이션 스타일 (데스크탑 기준)
+   ========================================================================== */
+/* ==========================================================================
+   [추가] 1. 전역 브라우저 여백 초기화 및 가로 스크롤 차단
+   * 이 코드가 파일 맨 위에 있어야 모바일 우측 공백이 원천적으로 사라집니다.
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* 패딩이 너비를 늘리지 않도록 고정 */
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden; /* 화면 밖으로 미세하게 삐져나가는 요소를 숨겨 여백 차단 */
+}
+
+/* ==========================================================================
+   기본 헤더 및 내비게이션 스타일 (데스크탑 기준)
+   ========================================================================== */
 .main-header {
   height: 60px;
   background: linear-gradient(to right, #6e171a, #b6282d);
   top: 0;
-  position: sticky;
+  padding: 0;
+  margin: 0;
+  position: fixed;
   z-index: 1000;
+  width: 100%; /* 확실하게 너비 100% 부여 */
 }
 
+/* 스크롤 시 상단 메뉴바에 콘텐츠가 가려지지 않도록 여백 설정 */
 .main-header,
 #about-me,
 #work-experience,
@@ -39,21 +66,21 @@ body {
   scroll-margin-top: 3000px;
 }
 
+/* 내비게이션 메뉴 리스트 컨테이너 */
 .main-nav ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   font-size: 22px;
   flex-wrap: nowrap;
   flex-shrink: 0;
   width: 100%;
-
   max-width: 1200px;
-  margin: 0 auto;
 }
 
+/* 메뉴 링크 스타일 */
 .main-nav li a {
   display: block;
   padding: 12px 16px;
@@ -61,13 +88,16 @@ body {
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
-  white-space: nowrap;
+  white-space: nowrap; /* 글자 줄바꿈 절대 방지 */
 }
 
 .main-nav li a:hover {
   color: rgb(255, 64, 64);
 }
 
+/* ==========================================================================
+   태블릿 중단점 (최대 너비 1023px 이하)
+   ========================================================================== */
 @media screen and (max-width: 1023px) {
   .main-nav ul {
     font-size: 16px;
@@ -79,11 +109,15 @@ body {
   }
 }
 
+/* ==========================================================================
+   모바일 중단점 (최대 너비 767px 이하)
+   ========================================================================== */
 @media screen and (max-width: 767px) {
   .main-header {
     height: auto;
-    min-height: 60px;
-    padding: 8px 0;
+    min-height: 50px;
+    padding: 0;
+    width: 100%;
   }
 
   .main-header,
@@ -93,21 +127,26 @@ body {
   #hobbies,
   #education,
   #contact {
-    scroll-margin-top: 70px;
+    scroll-margin-top: 50px;
   }
 
   .main-nav ul {
-    font-size: 14px;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 4px;
+    font-size: 11px;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    gap: 0;
+
+    /* [수정] 양 끝 여백 때문에 삐져나가지 않도록 패딩을 0으로 맞춤 */
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
   }
 
   .main-nav li a {
-    padding: 8px 10px;
+    /* [수정] 글자가 찌그러지거나 우측으로 밀리지 않게 좌우 패딩을 4px로 안전하게 축소 */
+    padding: 16px 4px;
   }
 }
-
 .main {
   padding: 0;
   margin: 0;
@@ -119,7 +158,7 @@ body {
   align-items: center;
   padding: 150px 100px;
   gap: 50px;
-  margin-bottom: 100px;
+  margin-bottom: 140px;
 }
 
 .main-text {
@@ -194,7 +233,7 @@ body {
   color: #3d3838;
   font-size: 26px;
   line-height: 2;
-  margin: 200px 0 340px;
+  margin: 200px 0 360px;
 }
 
 @media screen and (max-width: 1279px) {
@@ -287,7 +326,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 0 auto 320px;
+  margin: 0 auto 450px;
   padding: 0 48px;
   box-sizing: border-box;
   gap: 30px;
@@ -300,7 +339,7 @@ body {
   gap: 20px;
   width: 98%;
   padding: 0;
-  margin: 100px 0 0px;
+  margin: 250px 0 0px;
 }
 
 .experience-section-content > li {
@@ -362,6 +401,7 @@ body {
   display: block;
   margin: 0 auto;
   box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
 }
 
 /* ==========================================
@@ -459,7 +499,8 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  margin: 20px 0 400px;
+  margin: 200px 0 400px;
+  align-items: center;
 }
 
 .skills-section-images img {
@@ -577,43 +618,43 @@ body {
 }
 
 /* ==========================================================================
-   HOBBIES 섹션 - 타이틀 정렬 및 형태 유지 통합 코드
+   취미 섹션 레이아웃 (최종 정밀 조율 버전)
    ========================================================================== */
 
-.hobbies-section {
-  position: relative !important;
-  width: 100%;
-  aspect-ratio: 4 / 3.2;
-  margin: 0 auto 50px;
-  box-sizing: border-box;
-}
-
-/* ==========================================================================
-   [수정] HOBBIES 타이틀 정렬 및 반응형 폰트 크기 설정
-   ========================================================================== */
-.hobbies-section h2.sub-text {
-  display: block;
-  text-align: left !important;
-  margin: 0 0 20px 40px;
+.hobbios-text {
+  padding: 0 40px;
+  left: calc(-50vw + 50% + 50px);
   font-size: clamp(1.8rem, 4vw, 48px);
   font-weight: 700;
   color: #b6282d;
-  position: relative;
-  z-index: 5;
+  z-index: 20; /* 오각형이나 아이콘보다 항상 위에 보이도록 설정 */
 }
 
+.hobbies-section {
+  position: relative;
+  width: 100%;
+  max-width: 700px; /* 데스크탑 최대 너비 제한 */
+  aspect-ratio: 1 / 1; /* 정사각형 비율로 맞추어 오각형 왜곡 방지 */
+  margin: 0 auto 60px;
+  box-sizing: border-box;
+}
+
+/* 제목 스타일 */
+
+/* 오각형 배경 설정 */
 .pentagon {
   position: absolute;
-  top: 60%;
+  top: 55%;
   left: 50%;
-  width: 40%;
-  height: 48%;
+  width: 50%;
+  height: 50%;
   transform: translate(-50%, -50%);
   background: radial-gradient(circle, #e2262d 0%, #761f22 100%);
   clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
   z-index: 1;
 }
 
+/* 꼭짓점 공통 스타일 */
 .vertex {
   position: absolute !important;
   display: flex;
@@ -622,70 +663,93 @@ body {
   justify-content: center;
   text-align: center;
   z-index: 10;
+  width: 130px; /* 글자 줄바꿈 방지 */
+  transform: translate(-50%, -50%); /* 중심점 정렬 */
 }
 
+/* [색상 수정] 아이콘 이미지 크기 및 기존 붉은색 필터 적용 */
 .vertex img {
-  width: clamp(55px, 10vw, 120px);
-  height: clamp(55px, 10vw, 120px);
+  width: clamp(55px, 9vw, 95px);
+  height: clamp(55px, 9vw, 95px);
   object-fit: contain;
-  filter: invert(16%) sepia(85%) saturate(3400%) hue-rotate(342deg)
-    brightness(84%) contrast(94%);
+  /* 검은색 SVG 아이콘을 원래 원하셨던 테마 색상(#b6282d 계열)으로 변환하는 필터 */
+  filter: invert(19%) sepia(61%) saturate(3755%) hue-rotate(343deg)
+    brightness(88%) contrast(92%);
 }
 
+/* 텍스트 스타일 */
 .vertex span {
-  font-size: clamp(10px, 1.3vw, 15px);
+  font-size: clamp(12px, 1.5vw, 15px);
   font-weight: bold;
   color: #404040;
-  margin-top: 0.8vw;
+  margin-top: 8px;
   white-space: nowrap;
 }
 
 /* ==========================================================================
-   오각형 꼭지점별 절대 고정 좌표 
+   꼭짓점별 좌표 정밀 튜닝 (오각형 모서리에 정확히 매핑)
    ========================================================================== */
 
+/* 12시 방향: 헬스 (위쪽 꼭짓점) */
 .spot-fitness {
-  top: 11%;
+  top: 18%;
   left: 50%;
-  transform: translateX(-50%);
 }
 
+/* 2시 방향: 유튜브 시청 (우측 상단 꼭짓점) */
 .spot-ott {
-  top: 48% !important;
-  right: 16% !important;
-  left: auto !important;
+  top: 48%;
+  left: 85%;
 }
 .spot-ott img {
-  width: clamp(35px, 6vw, 70px) !important;
+  width: clamp(50px, 8vw, 85px) !important;
   height: auto !important;
 }
 
+/* 5시 방향: 노래 감상 (우측 하단 꼭짓점) */
 .spot-music {
-  bottom: 4%;
-  right: 18%;
+  top: 88%;
+  left: 72%;
 }
 
+/* 7시 방향: 축구 시청 (좌측 하단 꼭짓점) */
 .spot-soccer {
-  bottom: 4%;
-  left: 20%;
+  top: 88%;
+  left: 28%;
 }
 
+/* 10시 방향: 커피 한잔 (좌측 상단 꼭짓점) */
 .spot-coffee {
-  top: 42%;
-  left: 14%;
-}
-
-.svg-icon {
-  color: #b6282d;
+  top: 48%;
+  left: 15%;
 }
 
 /* ==========================================================================
-   [추가] 모바일 중단점 (768px 미만 소형 화면 브레이크포인트)
-   * 화면이 심하게 줄어들 때 타이틀 여백을 유연하게 좁혀 정렬을 유지합니다.
+   반응형 모바일 미디어 쿼리 (768px 미만 화면)
    ========================================================================== */
 @media screen and (max-width: 768px) {
   .hobbies-section h2.sub-text {
     margin-left: 20px;
+  }
+
+  /* 모바일 화면에서 아이콘이 바깥으로 탈출하지 않도록 간격 미세 좁힘 */
+  .vertex {
+    width: 100px;
+  }
+
+  .spot-ott {
+    left: 86%;
+  }
+  .spot-music {
+    left: 74%;
+    top: 87%;
+  }
+  .spot-soccer {
+    left: 26%;
+    top: 87%;
+  }
+  .spot-coffee {
+    left: 14%;
   }
 }
 
@@ -701,7 +765,7 @@ body {
   align-items: center;
   justify-content: center;
   font-weight: 200;
-  font-size: 14px;
+  font-size: 16px;
   padding: 10px 20px;
   margin-top: 30px;
   color: #ebebe7;
