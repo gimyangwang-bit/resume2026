@@ -499,7 +499,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  margin: 200px 0 400px;
+  margin: 200px 0 300px;
   align-items: center;
 }
 
@@ -599,7 +599,7 @@ body {
   .skills-section-images {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
-    margin: 20px 0 80px;
+    margin: 20px 0 170px;
   }
 
   .figma,
@@ -633,9 +633,9 @@ body {
 .hobbies-section {
   position: relative;
   width: 100%;
-  max-width: 700px; /* 데스크탑 최대 너비 제한 */
+  max-width: 670px; /* 데스크탑 최대 너비 제한 */
   aspect-ratio: 1 / 1; /* 정사각형 비율로 맞추어 오각형 왜곡 방지 */
-  margin: 0 auto 60px;
+  margin: 0 auto 0px;
   box-sizing: border-box;
 }
 
@@ -767,7 +767,7 @@ body {
   font-weight: 200;
   font-size: 16px;
   padding: 10px 20px;
-  margin-top: 30px;
+  margin-top: 40px;
   color: #ebebe7;
 }
 
